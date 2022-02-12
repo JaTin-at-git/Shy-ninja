@@ -97,6 +97,11 @@ body {
     width: 20px;
     display: none;
 }
+@media only screen and (max-width: 900px) {
+    .navbar{
+        background-color: var(--color-dark);
+    }
+}
 
 @media only screen and (max-width: 600px) {
     body{
