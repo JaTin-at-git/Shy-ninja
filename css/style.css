@@ -98,7 +98,7 @@ body {
 #responsiveNavbar {
     position: absolute;
     top: 17px;
-    right: 52px;
+    right: 37px;
     z-index: 1;
     height: 20px;
     width: 20px;
@@ -118,7 +118,11 @@ body {
     }
 
     .navbar__logo {
-        transform: translateY(10px);
+        margin-left: 10px;
+    }
+
+    .navbar__links{
+        width: 100%;
     }
 
     #responsiveNavbar {
@@ -129,8 +133,8 @@ body {
     .navbar__links::before {
         content: "";
         position: absolute;
-        top: 25px;
-        right: 50px;
+        top: 15px;
+        right: 35px;
         width: 25px;
 
         height: 3px;
@@ -140,8 +144,8 @@ body {
     .navbar__links::after {
         content: "";
         position: absolute;
-        top: 15px;
-        right: 60px;
+        top: 5px;
+        right: 45px;
         width: 3px;
         height: 25px;
         background-color: white;
@@ -150,15 +154,7 @@ body {
     .navbar {
         align-items: flex-start;
         background-color: var(--color-dark);
-        padding-bottom: 0;
-    }
-
-    .navbar__links ul {
-        display: block;
-    }
-
-    .navbar__links {
-        margin-top: 50px;
+        flex-direction: column;
     }
 
     .navbar__links ul {
@@ -188,21 +184,28 @@ body {
     background: url("../images/background.jpg"), linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5020278375021884) 100%);
     overflow: hidden;
     background-size: contain;
-    padding: 80px 0 0;
+    padding: 50px 0 0;
     max-height: 90vh;
 }
 
+
 .section1Container {
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    background: radial-gradient(20.31% 39.17% at 74.67% 57.91%, rgba(255, 255, 255, 0.27) 0%, rgba(196, 196, 196, 0) 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     position: relative;
     color: white;
+    padding: 50px 50px 0;
 }
 
 .section1div1 {
-    max-width: 35%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section1div2{
+    display: flex;
 }
 
 .section1div1 .element1 h1 {
@@ -222,16 +225,9 @@ body {
     margin-right: 20px;
 }
 
-.section1div2 {
-    margin-left: 30px;
-    display: flex;
-    justify-content: center;
-    max-width: 50%;
-    margin-right: -100px;
-}
-
 .section1div2 img {
-    max-width: 70%;
+    max-width: 55%;
+    margin: auto;
 }
 
 @media only screen and (max-width: 900px) {
@@ -240,6 +236,7 @@ body {
         background: url("../images/background.jpg");
         background-size: contain;
         position: relative;
+        padding-top: 100px;
     }
 
     .section1::after {
@@ -254,11 +251,14 @@ body {
     }
 
     .section1Container {
+        background: none;
         display: grid;
+        grid-template-columns: 1fr;
         grid-template-areas: "s1d2""s1d1";
         justify-items: center;
         z-index: 2;
         height: 100%;
+        padding: 0;
     }
 
     .section1div1 {
@@ -275,12 +275,13 @@ body {
     }
 
     .section1div2 img {
-        max-width: 90%;
+        /*max-width: 90%;*/
+        /*max-height: 55%;*/
     }
 
     .section1div1 {
-        margin: 50px 0;
-        width: 80%;
+        margin: 50px;
+        /*padding: 50px;*/
     }
 
 
@@ -357,6 +358,9 @@ body {
 }
 
 @media only screen and (max-width: 950px) {
+    .section2{
+        padding: 50px;
+    }
     .section2div1 {
         max-width: initial;
         padding-top: 30px;
@@ -409,6 +413,9 @@ body {
 }
 
 @media only screen and (max-width: 950px) {
+    .section3{
+        padding: 50px;
+    }
     .section3div1 {
         width: 80%;
         text-align: center;
@@ -462,7 +469,10 @@ body {
 
 @media only screen and (max-width: 800px) {
     .section3div2 [class^="sec3d2box"] {
-        border: 1px solid white;
+        border: 1px solid #ffffff30;
+        box-shadow: 9px 9px 9px 9px rgba(0,0,0,0.11);
+        -webkit-box-shadow: 9px 9px 9px 9px rgba(0,0,0,0.11);
+        -moz-box-shadow: 9px 9px 9px 9px rgba(0,0,0,0.11);
     }
 
     .section3div1 {
@@ -632,8 +642,6 @@ body {
 /*///////////SECTION 5 DONE///////////// */
 .section6{
     background: url("../images/background.jpg"), linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5020278375021884) 100%);
-    background-size: contain;
-    /*height: 200px;*/
     padding: 80px 0 20px;
     margin-bottom: -50%;
 }
