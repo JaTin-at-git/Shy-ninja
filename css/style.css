@@ -306,7 +306,7 @@ body {
     color: white;
 }
 
-.button--primary:active {
+.button--secondary:active {
     transform: scale(.95);
 }
 
